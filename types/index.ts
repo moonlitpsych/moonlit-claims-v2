@@ -2,15 +2,27 @@
 
 /**
  * Claim Status Enum
- * Represents the lifecycle of a claim from creation to payment
+ * Represents the complete lifecycle of a claim from creation to payment
+ * Extended to support FOLLOWING_CLAIMS.md event-sourced architecture
  */
 export enum ClaimStatus {
   DRAFT = 'draft',
   VALIDATED = 'validated',
   SUBMITTED = 'submitted',
+  CLEARINGHOUSE_ACCEPTED = 'clearinghouse_accepted',
+  CLEARINGHOUSE_REJECTED = 'clearinghouse_rejected',
+  PAYER_ACCEPTED = 'payer_accepted',
+  PAYER_REJECTED = 'payer_rejected',
+  IN_PROCESS = 'in_process',
+  PENDED = 'pended',
+  DENIED = 'denied',
+  PARTIAL = 'partial',
+  PAID = 'paid',
+  ADJUSTED = 'adjusted',
+  VOID = 'void',
+  // Legacy statuses for backward compatibility
   ACCEPTED = 'accepted',
   REJECTED = 'rejected',
-  PAID = 'paid',
 }
 
 /**
