@@ -1,0 +1,25 @@
+{
+  "name": "cm-billing-system",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "services/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev:cpss",
+    "dev:cpss": "npm run dev --workspace=apps/cpss-portal",
+    "dev:patient": "npm run dev --workspace=apps/patient-portal",
+    "dev:admin": "npm run dev --workspace=apps/admin-portal",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "clean": "rm -rf node_modules apps/*/node_modules packages/*/node_modules services/*/node_modules"
+  },
+  "devDependencies": {
+    "dotenv": "^16.6.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

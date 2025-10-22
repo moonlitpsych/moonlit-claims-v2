@@ -1,0 +1,57 @@
+# Dependencies
+node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Next.js
+/.next/
+/out/
+
+# Production
+/build
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment Variables
+.env
+.env*.local
+.env.production
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.history
+
+# HIPAA Compliance - Never commit PHI
+/test-data/real-patient-data/
+*.edi
+*.837
+*.835
+*.271
+*.270
+/uploads/
+/sftp-downloads/
+
+# Logs (ensure no PHI in logs before committing any log files)
+logs
+*.log
